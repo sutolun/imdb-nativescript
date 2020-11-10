@@ -1,0 +1,37 @@
+
+<Page loaded="pageLoaded" navigatingTo="onNavigatingTo" xmlns="http://www.nativescript.org/tns.xsd">
+	<ActionBar title="IMDB Api Project">
+	</ActionBar>
+		<StackLayout class="home-panel">
+            <StackLayout orientation="horizontal">
+                <Image src="~/images/t100.jpg" width="350px" class="img-rounded m-r-20" height="350px" stretch="aspectFill" />
+              <StackLayout orientation="vertical">
+                <Label textWrap="true" text="Most Popular Movies"
+                class="h1 description-label" />
+                  <Label textWrap="true"
+                      text="IMDB"
+                      class="h3 description-label" />
+              </StackLayout>
+        </StackLayout>
+            <Label textWrap="true" text="Top 100"
+                class="characters-label" />
+                <StackLayout class="hr m-20"></StackLayout>
+         <ListView 
+         items="{{ movies }}" 
+         itemTap="onItemTap" 
+         id="listView"
+         loaded="{{ onListViewLoaded }}" 
+         style="height:1500px">
+                <ListView.itemTemplate>
+                    <StackLayout orientation="horizontal" id="{{ id }}">
+                    <Image src="{{ image }}"
+                            class="thumb img-circle" />
+                            <Label text="{{ title }}" class="t-20"
+                            verticalAlignment="center" style="width: 60%" />
+                            <Label text="{{ imDbRating }}"
+                            verticalAlignment="center" style="color : blue" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+		</StackLayout>
+</Page>

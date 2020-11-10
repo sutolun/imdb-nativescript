@@ -1,0 +1,33 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar>
+        <Label id="apptitle" text="title" class="h2" style="color : white"></Label>
+        <NavigationButton tap="onBackButtonTap" android.systemIcon="ic_menu_back"/>
+    </ActionBar>
+    <ScrollView>
+    <FlexboxLayout class="flex-char">
+    <StackLayout orientation="vertical" class="stack-char" androidElevation="5">
+                <StackLayout orientation="horizontal">
+                <Label class="char-labels m-r-5" fontSize="20" fontWeight="bold" text="Title :" textWrap="true"/>
+                <Label id="title" class="char-labels" fontSize="18"  text="title" textWrap="true"/>
+                </StackLayout>
+                <StackLayout class="hr m-10"></StackLayout>
+                <StackLayout orientation="horizontal">
+                <Label class="char-labels m-r-5" fontSize="20" fontWeight="bold" text="Year :" textWrap="true"/>
+                <Label id="year" class="char-labels" fontSize="18"  text="year" textWrap="true"/>
+                </StackLayout>
+                <StackLayout class="hr m-10"></StackLayout>
+                <StackLayout orientation="horizontal">
+                <Label class="char-labels m-r-5" fontSize="20" fontWeight="bold" text="Type :" textWrap="true"/>
+                <Label id="type" class="char-labels" fontSize="18"  text="-" textWrap="true"/>
+                </StackLayout>
+                <StackLayout class="hr m-10"></StackLayout>
+                <StackLayout orientation="horizontal">
+                <Label class="char-labels m-r-5" fontSize="20" fontWeight="bold" text="Details :" textWrap="true"/>
+                <Label id="details" class="char-labels" fontSize="18"  text="-" textWrap="true"/>
+                </StackLayout>
+                <StackLayout class="hr m-10"></StackLayout>
+                
+        </StackLayout>
+    </FlexboxLayout>
+    </ScrollView>
+</Page>
